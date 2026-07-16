@@ -1,0 +1,3028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moe Kyaw Aung - Senior Android Developer with 12+ years experience in Kotlin, Jetpack Compose, Firebase, and modern Android development">
+    <meta name="keywords" content="Android Developer, Kotlin, Jetpack Compose, Firebase, Mobile Development, Myanmar Developer">
+    <meta name="author" content="Moe Kyaw Aung">
+    <meta property="og:title" content="Moe Kyaw Aung - Senior Android Developer">
+    <meta property="og:description" content="Android Developer specializing in Kotlin, Jetpack Compose, and scalable mobile solutions">
+    <meta property="og:image" content="https://res.cloudinary.com/dye5qpwii/image/upload/v1778527878/IMG_20260430_053105_uef0yr.png">
+    <meta property="og:url" content="https://dev-moe-kyawaung.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>⭐ MOE KYAW AUNG ⭐ SENIOR ANDROID DEVELOPER V2</title>
+    
+    <!-- Google Fonts - Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* ============================================================
+           PREMIUM CSS VARIABLES - Version 2
+           ============================================================ */
+        :root {
+            /* Premium Color Palette */
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            
+            /* Solid Colors */
+            --primary: #667eea;
+            --secondary: #f5576c;
+            --accent: #00f2fe;
+            --success: #43e97b;
+            --warning: #ffd700;
+            
+            /* Premium Dark Theme */
+            --bg-primary: #0f0f23;
+            --bg-secondary: #1a1a2e;
+            --bg-tertiary: #16213e;
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --bg-glass-hover: rgba(255, 255, 255, 0.1);
+            
+            /* Text Colors */
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8d1;
+            --text-muted: #6c6c8e;
+            
+            /* Glass Morphism */
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            
+            /* Animations */
+            --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --transition-elastic: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            
+            /* Spacing */
+            --section-padding: clamp(4rem, 10vw, 8rem) clamp(1rem, 5vw, 3rem);
+        }
+
+        /* ============================================================
+           PREMIUM BASE STYLES
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            border: 2px solid var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, var(--accent), var(--primary));
+        }
+
+        /* ============================================================
+           PREMIUM PRELOADER WITH ANIMATIONS
+           ============================================================ */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10001;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-premium {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+
+        .loader-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        }
+
+        .loader-ring:nth-child(2) {
+            width: 85%;
+            height: 85%;
+            top: 7.5%;
+            left: 7.5%;
+            border-top-color: var(--secondary);
+            animation-delay: -0.3s;
+        }
+
+        .loader-ring:nth-child(3) {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            border-top-color: var(--accent);
+            animation-delay: -0.6s;
+        }
+
+        .loader-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* ============================================================
+           PREMIUM CURSOR - Version 2
+           ============================================================ */
+        .premium-cursor {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translate(-50%, -50%);
+        }
+
+        .premium-cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px var(--accent);
+        }
+
+        .premium-cursor.hover {
+            width: 60px;
+            height: 60px;
+            border-color: var(--secondary);
+            background: rgba(245, 87, 108, 0.1);
+        }
+
+        /* ============================================================
+           PREMIUM NAVIGATION - Glass Morphism
+           ============================================================ */
+        .nav-premium {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-premium.scrolled {
+            background: rgba(15, 15, 35, 0.9);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container-premium {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-logo-premium::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-logo-premium:hover::before {
+            width: 100%;
+        }
+
+        .nav-menu-premium {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link-premium {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .nav-link-premium::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transform: translateX(-50%);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-link-premium:hover {
+            color: var(--accent);
+        }
+
+        .nav-link-premium:hover::after {
+            width: 100%;
+        }
+
+        /* Premium Theme Toggle */
+        .theme-toggle-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 0.7rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theme-toggle-premium:hover {
+            background: var(--bg-glass-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle-premium {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle-premium span {
+            width: 28px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: var(--transition-smooth);
+            border-radius: 3px;
+        }
+
+        .menu-toggle-premium.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle-premium.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-toggle-premium.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* ============================================================
+           PREMIUM HERO SECTION - Advanced Animations
+           ============================================================ */
+        .hero-premium {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 90px;
+        }
+
+        /* Animated Gradient Background */
+        .hero-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(0, 242, 254, 0.1) 0%, transparent 50%);
+            animation: gradientMove 15s ease infinite;
+            z-index: 0;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { transform: scale(1) translate(0, 0); }
+            50% { transform: scale(1.1) translate(-20px, 20px); }
+        }
+
+        /* Geometric Shapes Animation */
+        .hero-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+        }
+
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary), transparent);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+            animation: float1 20s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--secondary), transparent);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            bottom: -50px;
+            left: -50px;
+            animation: float2 15s ease-in-out infinite;
+        }
+
+        .shape-3 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--accent), transparent);
+            border-radius: 50%;
+            top: 50%;
+            left: 10%;
+            animation: float3 18s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-50px, 50px) rotate(180deg); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(30px, -30px) rotate(-180deg); }
+        }
+
+        @keyframes float3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20px, 20px) scale(1.2); }
+        }
+
+        /* Grid Background */
+        .hero-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(102, 126, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(102, 126, 234, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+
+        /* Hero Content */
+        .hero-content-premium {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        /* Premium Badge with Animation */
+        .hero-badge-premium {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: slideDown 1s cubic-bezier(0.4, 0, 0.2, 1), float 3s ease-in-out infinite 1s;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+        }
+
+        .hero-badge-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--success);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Premium Title with Split Text Animation */
+        .hero-title-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
+        }
+
+        .hero-title-gradient {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            animation: gradientShift 5s ease infinite;
+            background-size: 200% auto;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Subtitle with Typewriter Effect */
+        .hero-subtitle-premium {
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s backwards;
+        }
+
+        .typewriter {
+            display: inline-block;
+            border-right: 3px solid var(--primary);
+            padding-right: 5px;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Location with Icon */
+        .hero-location-premium {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.7s backwards;
+        }
+
+        .location-icon {
+            color: var(--secondary);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Description */
+        .hero-desc-premium {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.9s backwards;
+        }
+
+        /* Premium Statistics with Animated Cards */
+        .hero-stats-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 1.1s backwards;
+        }
+
+        .stat-card-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card-premium:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            border-color: var(--primary);
+        }
+
+        .stat-card-premium:hover::before {
+            opacity: 0.1;
+        }
+
+        .stat-number-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-label-premium {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Premium Buttons with Magnetic Effect */
+        .hero-buttons-premium {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 1.3s backwards;
+        }
+
+        .btn-premium {
+            padding: 1.2rem 2.8rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .btn-primary-premium {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 60px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-primary-premium:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary-premium {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary-premium:hover {
+            background: var(--glass-bg);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 60px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Social Icons with Stagger Animation */
+        .hero-socials-premium {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 1.5s backwards;
+        }
+
+        .social-icon-premium {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            transition: var(--transition-bounce);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icon-premium:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            border-color: var(--primary);
+        }
+
+        .social-icon-premium:hover::before {
+            opacity: 1;
+        }
+
+        .social-icon-premium i {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 1.7s backwards;
+        }
+
+        .scroll-text {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .scroll-line {
+            width: 2px;
+            height: 50px;
+            background: linear-gradient(180deg, var(--primary), transparent);
+            animation: scrollDown 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollDown {
+            0%, 100% { opacity: 0; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(20px); }
+        }
+
+        /* ============================================================
+           PREMIUM SECTION SEPARATOR
+           ============================================================ */
+        .section-sep-premium {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+            margin: 6rem auto;
+            max-width: 80%;
+            position: relative;
+        }
+
+        .section-sep-premium::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+                        width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--primary);
+        }
+
+        /* ============================================================
+           PREMIUM SECTION STYLES
+           ============================================================ */
+        .section-premium {
+            padding: var(--section-padding);
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Section Label with Line */
+        .section-label-premium {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .section-label-premium::before,
+        .section-label-premium::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--primary);
+        }
+
+        /* Premium Section Title */
+        .section-title-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        /* Section Description */
+        .section-desc-premium {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        /* ============================================================
+           PREMIUM ABOUT SECTION - Glass Cards
+           ============================================================ */
+        .about-grid-premium {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        /* Image Container with 3D Effect */
+        .about-image-container {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .about-image-premium {
+            width: 100%;
+            border-radius: 30px;
+            transition: var(--transition-smooth);
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image-frame {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .about-image-frame::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                var(--primary),
+                transparent 30%
+            );
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .about-image-frame:hover::before {
+            opacity: 0.5;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .about-image-frame:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Floating Decorative Elements */
+        .about-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .about-decoration-1 {
+            top: -30px;
+            right: -30px;
+            animation: float1 6s ease-in-out infinite;
+        }
+
+        .about-decoration-2 {
+            bottom: -30px;
+            left: -30px;
+            animation: float2 8s ease-in-out infinite;
+        }
+
+        /* About Content */
+        .about-content-premium {
+            position: relative;
+        }
+
+        .about-content-premium h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content-premium p {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Premium Info Cards */
+        .info-cards-premium {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .info-card-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.8rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .info-card-premium:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.2);
+        }
+
+        .info-card-premium:hover::before {
+            transform: scaleX(1);
+        }
+
+        .info-card-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card-value {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .info-card-value.highlight {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============================================================
+           PREMIUM PROGRESS RINGS - SVG Animations
+           ============================================================ */
+        .progress-section-premium {
+            margin-top: 5rem;
+        }
+
+        .progress-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .progress-card-premium {
+            text-align: center;
+            position: relative;
+        }
+
+        .progress-ring-premium {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .progress-ring-premium svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+            filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.3));
+        }
+
+        .progress-ring-premium circle {
+            fill: none;
+            stroke-width: 12;
+            stroke-linecap: round;
+        }
+
+        .progress-ring-bg {
+            stroke: var(--bg-tertiary);
+        }
+
+        .progress-ring-fill {
+            stroke: url(#gradient1);
+            stroke-dasharray: 540;
+            stroke-dashoffset: 540;
+            transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .progress-card-premium.animated .progress-ring-fill {
+            stroke-dashoffset: calc(540 - (540 * var(--progress)) / 100);
+        }
+
+        .progress-percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .progress-label-premium {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* ============================================================
+           PREMIUM TIMELINE - Modern Design
+           ============================================================ */
+        .timeline-premium {
+            position: relative;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary), var(--accent));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item-premium {
+            position: relative;
+            margin-bottom: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .timeline-item-premium:nth-child(even) .timeline-content-premium {
+            order: 2;
+        }
+
+        .timeline-content-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .timeline-content-premium::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .timeline-item-premium:nth-child(odd) .timeline-content-premium::before {
+            right: -3rem;
+        }
+
+        .timeline-item-premium:nth-child(even) .timeline-content-premium::before {
+            left: -3rem;
+        }
+
+        .timeline-content-premium:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            border-color: var(--primary);
+        }
+
+        .timeline-dot-premium {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 4px solid var(--bg-primary);
+            box-shadow: 0 0 0 4px var(--glass-border), 0 0 30px var(--primary);
+            z-index: 2;
+        }
+
+        .timeline-year-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-title-premium {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-desc-premium {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* ============================================================
+           PREMIUM SKILLS - Animated Chips
+           ============================================================ */
+        .skills-container-premium {
+            margin-top: 4rem;
+        }
+
+        .skills-grid-premium {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+        }
+
+        .skill-chip-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition-bounce);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-chip-premium::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+            z-index: -1;
+        }
+
+        .skill-chip-premium:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .skill-chip-premium:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* ============================================================
+           PREMIUM APPS GRID - Hover Effects
+           ============================================================ */
+        .apps-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .app-card-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .app-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .app-card-premium:hover::before {
+            left: 100%;
+        }
+
+        .app-card-premium:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(102, 126, 234, 0.3);
+            border-color: var(--primary);
+        }
+
+        .app-icon-premium {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: var(--transition-bounce);
+        }
+
+        .app-card-premium:hover .app-icon-premium {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .app-title-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .app-desc-premium {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .app-link-premium {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+
+        .app-link-premium:hover {
+            gap: 1rem;
+            color: var(--accent);
+        }
+
+        .app-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .app-tag {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+
+        /* ============================================================
+           PREMIUM CERTIFICATES - Modern Cards
+           ============================================================ */
+        .cert-showcase-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .cert-card-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card-premium::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent,
+                rgba(102, 126, 234, 0.1),
+                transparent 30%
+            );
+            animation: rotate 6s linear infinite;
+            opacity: 0;
+        }
+
+        .cert-card-premium:hover::before {
+            opacity: 1;
+        }
+
+        .cert-card-premium:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            border-color: var(--primary);
+        }
+
+        .cert-icon-premium {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-count-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-label-premium {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+           PREMIUM TESTIMONIALS - Carousel
+           ============================================================ */
+        .testimonial-section-premium {
+            position: relative;
+            padding: 6rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-slider-premium {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card-premium {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+                       box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+        }
+
+        .footer-bottom-premium {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+        }
+
+        .footer-bottom-premium p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .footer-heart {
+            color: var(--secondary);
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            10%, 30% { transform: scale(1.1); }
+            20%, 40% { transform: scale(1); }
+        }
+
+        /* ============================================================
+           PREMIUM BACK TO TOP BUTTON
+           ============================================================ */
+        .back-to-top-premium {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 65px;
+            height: 65px;
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5);
+            transition: var(--transition-bounce);
+            backdrop-filter: blur(10px);
+        }
+
+        .back-to-top-premium.visible {
+            display: flex;
+        }
+
+        .back-to-top-premium:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.7);
+        }
+
+        /* ============================================================
+           PREMIUM SCROLL ANIMATIONS
+           ============================================================ */
+        .fade-in-premium {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in-premium.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-left-premium {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-left-premium.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-right-premium {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-right-premium.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in-premium {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scale-in-premium.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ============================================================
+           RESPONSIVE DESIGN - Mobile First
+           ============================================================ */
+        @media (max-width: 1024px) {
+            .about-grid-premium,
+            .contact-grid-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-content-premium::before {
+                display: none;
+            }
+
+            .timeline-dot-premium {
+                left: 30px;
+            }
+
+            .timeline-item-premium:nth-child(even) .timeline-content-premium {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu-premium {
+                position: fixed;
+                top: 85px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 85px);
+                background: rgba(15, 15, 35, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 3rem;
+                transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                gap: 2rem;
+                align-items: flex-start;
+                border-top: 1px solid var(--glass-border);
+            }
+
+            .nav-menu-premium.active {
+                left: 0;
+            }
+
+            .menu-toggle-premium {
+                display: flex;
+            }
+
+            .hero-title-premium {
+                font-size: clamp(2.5rem, 10vw, 4rem);
+            }
+
+            .hero-stats-premium {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-buttons-premium {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-premium {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .info-cards-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-grid-premium {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .apps-grid-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid-premium {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-grid-premium {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card-premium,
+            .cert-card-premium {
+                padding: 1.5rem;
+            }
+
+            .section-label-premium::before,
+            .section-label-premium::after {
+                width: 20px;
+            }
+        }
+
+        /* ============================================================
+           LIGHT MODE
+           ============================================================ */
+        body.light-mode {
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e9ecef;
+            --bg-glass: rgba(0, 0, 0, 0.05);
+            --bg-glass-hover: rgba(0, 0, 0, 0.1);
+            --text-primary: #212529;
+            --text-secondary: #495057;
+            --text-muted: #6c757d;
+            --glass-bg: rgba(255, 255, 255, 0.5);
+            --glass-border: rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-mode .premium-cursor {
+            border-color: var(--primary);
+            mix-blend-mode: normal;
+        }
+
+        body.light-mode .hero-premium::before {
+            opacity: 0.5;
+        }
+
+        /* ============================================================
+           LOADING ANIMATIONS
+           ============================================================ */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        .skeleton-loader {
+            background: linear-gradient(
+                90deg,
+                var(--bg-tertiary) 25%,
+                var(--bg-glass) 50%,
+                var(--bg-tertiary) 75%
+            );
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite;
+        }
+
+        /* ============================================================
+           UTILITIES
+           ============================================================ */
+        .text-gradient {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+        }
+
+        .hover-lift {
+            transition: var(--transition-smooth);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+        }
+
+        /* ============================================================
+           ACCESSIBILITY
+           ============================================================ */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 4px;
+            border-radius: 8px;
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Cursor -->
+    <div class="premium-cursor"></div>
+    <div class="premium-cursor-dot"></div>
+
+    <!-- Premium Preloader -->
+    <div class="preloader">
+        <div class="loader-premium">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-text">MKA</div>
+        </div>
+    </div>
+
+    <!-- Premium Navigation -->
+    <nav class="nav-premium">
+        <div class="nav-container-premium">
+            <a href="#home" class="nav-logo-premium">MOE<span style="color: var(--secondary);">.</span></a>
+            <ul class="nav-menu-premium">
+                <li><a href="#home" class="nav-link-premium">Home</a></li>
+                <li><a href="#about" class="nav-link-premium">About</a></li>
+                <li><a href="#skills" class="nav-link-premium">Skills</a></li>
+                <li><a href="#apps" class="nav-link-premium">Projects</a></li>
+                <li><a href="#testimonials" class="nav-link-premium">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link-premium">Contact</a></li>
+                <li>
+                    <button class="theme-toggle-premium" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="menu-toggle-premium" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Premium Hero Section -->
+    <section class="hero-premium" id="home">
+        <!-- Animated Background -->
+        <div class="hero-grid"></div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content-premium">
+            <div class="hero-badge-premium">
+                <span class="hero-badge-icon"></span>
+                <span>Available for Freelance</span>
+            </div>
+
+            <h1 class="hero-title-premium">
+                <span class="hero-title-gradient">MOE KYAW AUNG</span>
+            </h1>
+
+            <p class="hero-subtitle-premium">
+                <span class="typewriter">Senior Android Developer</span>
+            </p>
+
+            <div class="hero-location-premium">
+                <i class="fas fa-map-marker-alt location-icon"></i>
+                <span>Tachileik, Myanmar 🇲🇲 ↔ Bangkok, Thailand 🇹🇭</span>
+            </div>
+
+            <p class="hero-desc-premium">
+                Crafting exceptional mobile experiences with 12+ years of expertise in Kotlin, 
+                Jetpack Compose, and modern Android architecture. Transforming ideas into 
+                scalable, secure, and user-centric applications.
+            </p>
+
+            <!-- Premium Statistics -->
+            <div class="hero-stats-premium">
+                <div class="stat-card-premium">
+                    <span class="stat-number-premium" data-target="12">0</span>
+                    <span class="stat-label-premium">Years Experience</span>
+                </div>
+                <div class="stat-card-premium">
+                    <span class="stat-number-premium" data-target="3000">0</span>
+                    <span class="stat-label-premium">Apps Delivered</span>
+                </div>
+                <div class="stat-card-premium">
+                    <span class="stat-number-premium" data-target="122">0</span>
+                    <span class="stat-label-premium">Repositories</span>
+                </div>
+                <div class="stat-card-premium">
+                    <span class="stat-number-premium" data-target="100">0</span>
+                    <span class="stat-label-premium">% Satisfaction</span>
+                </div>
+            </div>
+
+            <!-- Premium Buttons -->
+            <div class="hero-buttons-premium">
+                <a href="#contact" class="btn-premium btn-primary-premium">
+                    <span>Let's Work Together</span>
+                    
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#apps" class="btn-premium btn-secondary-premium">
+                    <span>View Projects</span>
+                    <i class="fas fa-briefcase"></i>
+                </a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="hero-socials-premium">
+                <a href="https://github.com/Dev-moe-kyawaung" class="social-icon-premium" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" class="social-icon-premium" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://gravatar.com/moekyawaung13721" class="social-icon-premium" target="_blank" rel="noopener" aria-label="Gravatar">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <a href="mailto:moekyawaung@programmer.net" class="social-icon-premium" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+959889000889" class="social-icon-premium" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://t.me/moekyawaung" class="social-icon-premium" target="_blank" rel="noopener" aria-label="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll Down</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep-premium"></div>
+
+    <!-- Premium About Section -->
+    <section class="section-premium" id="about">
+        <div class="section-label-premium">Get To Know Me</div>
+        <h2 class="section-title-premium">About Me</h2>
+        <p class="section-desc-premium">
+            Passionate Android developer dedicated to building exceptional mobile experiences 
+            that make a difference in people's lives.
+        </p>
+
+        <div class="about-grid-premium">
+            <div class="about-image-container fade-in-premium">
+                <div class="about-decoration about-decoration-1"></div>
+                <div class="about-decoration about-decoration-2"></div>
+                <div class="about-image-frame">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778527878/IMG_20260430_053105_uef0yr.png" 
+                         alt="Moe Kyaw Aung" 
+                         class="about-image-premium">
+                </div>
+            </div>
+
+            <div class="about-content-premium fade-in-premium">
+                <h3>Senior Android Developer</h3>
+                <p>
+                    With nearly 12 years of hands-on experience, I specialize in building secure, 
+                    scalable, and user-friendly mobile applications. My expertise lies in Kotlin 
+                    and modern Jetpack development, including Compose, ViewModel, and Room.
+                </p>
+                <p>
+                    I'm passionate about clean architecture, maintainable code, and practical security. 
+                    From UI design to networking, local caching, testing, and release-ready builds—I 
+                    deliver features end-to-end with precision and excellence.
+                </p>
+                <p>
+                    My approach combines technical expertise with creative problem-solving, ensuring 
+                    every project not only meets but exceeds expectations. I believe in continuous 
+                    learning and staying ahead of industry trends.
+                </p>
+
+                <div class="info-cards-premium">
+                    <div class="info-card-premium">
+                        <div class="info-card-label">Name</div>
+                        <div class="info-card-value">Moe Kyaw Aung</div>
+                    </div>
+                    <div class="info-card-premium">
+                        <div class="info-card-label">Experience</div>
+                        <div class="info-card-value highlight">12+ Years</div>
+                    </div>
+                    <div class="info-card-premium">
+                        <div class="info-card-label">GitHub</div>
+                        <div class="info-card-value highlight">Dev-moe-kyawaung</div>
+                    </div>
+                    <div class="info-card-premium">
+                        <div class="info-card-label">Status</div>
+                        <div class="info-card-value highlight">Available 🟢</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Rings Section -->
+        <div class="progress-section-premium">
+            <h3 class="section-title-premium" style="font-size: 2.5rem; margin-top: 4rem;">Technical Expertise</h3>
+            
+            <div class="progress-grid-premium">
+                <div class="progress-card-premium" data-progress="95">
+                    <div class="progress-ring-premium">
+                        <svg>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-ring-bg" cx="90" cy="90" r="85"></circle>
+                            <circle class="progress-ring-fill" cx="90" cy="90" r="85"></circle>
+                        </svg>
+                        <div class="progress-percentage">95%</div>
+                    </div>
+                    <h4 class="progress-label-premium">Kotlin</h4>
+                    <p class="progress-desc">Advanced Android Development</p>
+                </div>
+
+                <div class="progress-card-premium" data-progress="92">
+                    <div class="progress-ring-premium">
+                        <svg>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-ring-bg" cx="90" cy="90" r="85"></circle>
+                            <circle class="progress-ring-fill" cx="90" cy="90" r="85" style="stroke: url(#gradient2);"></circle>
+                        </svg>
+                        <div class="progress-percentage">92%</div>
+                    </div>
+                    <h4 class="progress-label-premium">Jetpack Compose</h4>
+                    <p class="progress-desc">Modern UI Development</p>
+                </div>
+
+                <div class="progress-card-premium" data-progress="90">
+                    <div class="progress-ring-premium">
+                        <svg>
+                            <defs>
+                                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-ring-bg" cx="90" cy="90" r="85"></circle>
+                            <circle class="progress-ring-fill" cx="90" cy="90" r="85" style="stroke: url(#gradient3);"></circle>
+                        </svg>
+                        <div class="progress-percentage">90%</div>
+                    </div>
+                    <h4 class="progress-label-premium">Firebase</h4>
+                    <p class="progress-desc">Backend Integration</p>
+                </div>
+
+                <div class="progress-card-premium" data-progress="88">
+                    <div class="progress-ring-premium">
+                        <svg>
+                            <defs>
+                                <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-ring-bg" cx="90" cy="90" r="85"></circle>
+                            <circle class="progress-ring-fill" cx="90" cy="90" r="85" style="stroke: url(#gradient4);"></circle>
+                        </svg>
+                        <div class="progress-percentage">88%</div>
+                    </div>
+                    <h4 class="progress-label-premium">CI/CD</h4>
+                    <p class="progress-desc">DevOps & Automation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Timeline -->
+        <div class="timeline-premium">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item-premium fade-in-premium">
+                <div class="timeline-content-premium">
+                    <div class="timeline-year-premium">2013 - 2015</div>
+                    <h4 class="timeline-title-premium">Junior Android Developer</h4>
+                    <p class="timeline-desc-premium">
+                        Started my journey in Android development, learning Java and basic Android 
+                        components. Built foundational skills in mobile app architecture.
+                    </p>
+                </div>
+                <div class="timeline-dot-premium"></div>
+            </div>
+
+            <div class="timeline-item-premium fade-in-premium">
+                <div class="timeline-content-premium">
+                    <div class="timeline-year-premium">2016 - 2018</div>
+                    <h4 class="timeline-title-premium">Mid-Level Developer</h4>
+                    <p class="timeline-desc-premium">
+                        Mastered MVVM architecture, RxJava, and transitioned to Kotlin. Delivered 
+                        multiple successful projects for international clients.
+                    </p>
+                </div>
+                <div class="timeline-dot-premium"></div>
+            </div>
+
+            <div class="timeline-item-premium fade-in-premium">
+                <div class="timeline-content-premium">
+                    <div class="timeline-year-premium">2019 - 2021</div>
+                    <h4 class="timeline-title-premium">Senior Android Engineer</h4>
+                    <p class="timeline-desc-premium">
+                        Led development teams, implemented clean architecture, and adopted Jetpack 
+                        Compose. Mentored junior developers and established best practices.
+                    </p>
+                </div>
+                <div class="timeline-dot-premium"></div>
+            </div>
+
+            <div class="timeline-item-premium fade-in-premium">
+                <div class="timeline-content-premium">
+                    <div class="timeline-year-premium">2022 - Present</div>
+                    <h4 class="timeline-title-premium">Lead Android Developer</h4>
+                    <p class="timeline-desc-premium">
+                        Building scalable applications with modern tech stack, contributing to open 
+                        source, and helping businesses transform their mobile presence.
+                    </p>
+                </div>
+                <div class="timeline-dot-premium"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep-premium"></div>
+
+    <!-- Premium Skills Section -->
+    <section class="section-premium" id="skills">
+        <div class="section-label-premium">My Expertise</div>
+        <h2 class="section-title-premium">Skills & Technologies</h2>
+        <p class="section-desc-premium">
+            A comprehensive tech stack covering mobile development, backend integration, 
+            AI/ML, and modern DevOps practices.
+        </p>
+
+        <div class="skills-container-premium fade-in-premium">
+            <div class="skills-grid-premium">
+                <div class="skill-chip-premium">🤖 Kotlin</div>
+                <div class="skill-chip-premium">☕ Java</div>
+                <div class="skill-chip-premium">📱 Jetpack Compose</div>
+                <div class="skill-chip-premium">🏗️ MVVM</div>
+                <div class="skill-chip-premium">🧹 Clean Architecture</div>
+                <div class="skill-chip-premium">🔄 Coroutines</div>
+                <div class="skill-chip-premium">💧 Flow</div>
+                <div class="skill-chip-premium">🗄️ Room Database</div>
+                <div class="skill-chip-premium">🔥 Firebase</div>
+                <div class="skill-chip-premium">🌐 Retrofit</div>
+                <div class="skill-chip-premium">💉 Dagger/Hilt</div>
+                <div class="skill-chip-premium">🧪 JUnit & Espresso</div>
+                <div class="skill-chip-premium">📦 Gradle</div>
+                <div class="skill-chip-premium">🔄 Git & GitHub</div>
+                <div class="skill-chip-premium">🚀 CI/CD</div>
+                <div class="skill-chip-premium">🐍 Python</div>
+                <div class="skill-chip-premium">🤖 TensorFlow Lite</div>
+                <div class="skill-chip-premium">🧠 Claude API</div>
+                <div class="skill-chip-premium">🔐 Security</div>
+                <div class="skill-chip-premium">🐧 Linux</div>
+                <div class="skill-chip-premium">⚛️ React Native</div>
+                <div class="skill-chip-premium">🦋 Flutter</div>
+                <div class="skill-chip-premium">🎨 Material Design</div>
+                <div class="skill-chip-premium">☁️ AWS & Azure</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep-premium"></div>
+
+    <!-- Premium Apps Section -->
+    <section class="section-premium" id="apps">
+        <div class="section-label-premium">Portfolio</div>
+        <h2 class="section-title-premium">Featured Projects</h2>
+        <p class="section-desc-premium">
+            A showcase of production-ready applications built with modern technologies 
+            and best practices.
+        </p>
+
+        <div class="apps-grid-premium">
+            <div class="app-card-premium fade-in-premium">
+                <div class="app-icon-premium">📱</div>
+                <h3 class="app-title-premium">Social Dashboard</h3>
+                <p class="app-desc-premium">
+                    Feature-rich social media dashboard with real-time updates, analytics, 
+                    and user engagement tracking. Built with Jetpack Compose and Firebase.
+                </p>
+                <div class="app-tags">
+                    <span class="app-tag">Kotlin</span>
+                    <span class="app-tag">Compose</span>
+                    <span class="app-tag">Firebase</span>
+                </div>
+                <a href="https://github.com/moekyawaung-tech/social-dashboard" class="app-link-premium" target="_blank">
+                    <span>View Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="app-card-premium fade-in-premium">
+                <div class="app-icon-premium">🌐</div>
+                <h3 class="app-title-premium">PWA App</h3>
+                <p class="app-desc-premium">
+                    Progressive Web Application with offline support, push notifications, 
+                    and native-like experience across all devices.
+                </p>
+                <div class="app-tags">
+                    <span class="app-tag">PWA</span>
+                    <span class="app-tag">Service Workers</span>
+                    <span class="app-tag">Web APIs</span>
+                </div>
+                <a href="https://github.com/moekyawaung-tech/pwa-app" class="app-link-premium" target="_blank">
+                    <span>View Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="app-card-premium fade-in-premium">
+                <div class="app-icon-premium">🎮</div>
+                <h3 class="app-title-premium">Game Collection</h3>
+                <p class="app-desc-premium">
+                    Multiple casual games built with Canvas API and modern web technologies. 
+                    Features smooth animations and engaging gameplay.
+                </p>
+                <div class="app-tags">
+                    <span class="app-tag">Canvas</span>
+                    <span class="app-tag">JavaScript</span>
+                    <span class="app-tag">WebGL</span>
+                </div>
+                <a href="https://github.com/moekyawaung-tech/game-collection" class="app-link-premium" target="_blank">
+                    <span>View Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="app-card-premium fade-in-premium">
+                <div class="app-icon-premium">🎯</div>
+                <h3 class="app-title-premium">Video Player</h3>
+                <p class="app-desc-premium">
+                    Advanced video player with subtitle support, playback controls, and 
+                    streaming capabilities. Optimized for performance.
+                </p>
+                <div class="app-tags">
+                    <span class="app-tag">ExoPlayer</span>
+                    <span class="app-tag">MVVM</span>
+                    <span class="app-tag">Kotlin</span>
+                </div>
+                <a href="https://github.com/moekyawaung-tech/video-player" class="app-link-premium" target="_blank">
+                    <span>View Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="app-card-premium fade-in-premium">
+                <div class="app-icon-premium">💼</div>
+                <h3 class="app-title-premium">Job Portal App</h3>
+                <p class="app-desc-premium">
+                    Job search and application platform connecting employers with job seekers. 
+                    Features advanced filtering and real-time notifications.
+                </p>
+                <div class="app-tags">
+                    <span class="app-tag">Android</span>
+                    <span class="app-tag">REST API</span>
+                    <span class="app-tag">Room</span>
+                </div>
+                <a href="https://github.com/moekyawaung-tech/Job-Portal-App" class="app-link-premium" target="_blank">
+                    <span>View Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="app-card-premium fade-in-premium">
+                <div class="app-icon-premium">💰</div>
+                <h3 class="app-title-premium">POS System</h3>
+                <p class="app-desc-premium">
+                    Point of Sale system with inventory management, sales tracking, and 
+                    comprehensive reporting features.
+                </p>
+                <div class="app-tags">
+                    <span class="app-tag">Kotlin</span>
+                    <span class="app-tag">SQLite</span>
+                    <span class="app-tag">MVVM</span>
+                </div>
+                <a href="https://github.com/moekyawaung-tech/POS-Full-Version" class="app-link-premium" target="_blank">
+                    <span>View Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep-premium"></div>
+
+    <!-- Premium Certificates Section -->
+    <section class="section-premium" id="certificates">
+        <div class="section-label-premium">Credentials</div>
+        <h2 class="section-title-premium">Certificates & Achievements</h2>
+        <p class="section-desc-premium">
+            Comprehensive certification collection across programming, mobile development, 
+            AI, and cybersecurity.
+        </p>
+
+        <div class="cert-showcase-premium">
+            <div class="cert-card-premium fade-in-premium">
+                <div class="cert-icon-premium">💻</div>
+                <span class="cert-count-premium" data-target="25">0</span>
+                <div class="cert-label-premium">Programming</div>
+            </div>
+
+            <div class="cert-card-premium fade-in-premium">
+                <div class="cert-icon-premium">📱</div>
+                <span class="cert-count-premium" data-target="18">0</span>
+                <div class="cert-label-premium">Mobile Dev</div>
+            </div>
+
+            <div class="cert-card-premium fade-in-premium">
+                <div class="cert-icon-premium">🌐</div>
+                <span class="cert-count-premium" data-target="15">0</span>
+                <div class="cert-label-premium">Web Dev</div>
+            </div>
+
+            <div class="cert-card-premium fade-in-premium">
+                <div class="cert-icon-premium">🤖</div>
+                <span class="cert-count-premium" data-target="12">0</span>
+                <div class="cert-label-premium">AI & ML</div>
+            </div>
+
+            <div class="cert-card-premium fade-in-premium">
+                <div class="cert-icon-premium">🔐</div>
+                <span class="cert-count-premium" data-target="8">0</span>
+                <div class="cert-label-premium">Security</div>
+            </div>
+
+            <div class="cert-card-premium fade-in-premium">
+                <div class="cert-icon-premium">☁️</div>
+                <span class="cert-count-premium" data-target="4">0</span>
+                <div class="cert-label-premium">Cloud</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;" class="fade-in-premium">
+            <a href="https://dev-moe-kyawaung.github.io/Moekyawaung-Certificates/" 
+               class="btn-premium btn-primary-premium" 
+               target="_blank">
+                <span>View All 82+ Certificates</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="section-sep-premium"></div>
+
+    <!-- Premium Testimonials Section -->
+    <section class="testimonial-section-premium" id="testimonials">
+        <div class="section-label-premium">Client Feedback</div>
+        <h2 class="section-title-premium">What Clients Say</h2>
+        <p class="section-desc-premium">
+            Trusted by clients worldwide for delivering exceptional mobile solutions.
+        </p>
+
+        <div class="testimonial-slider-premium fade-in-premium">
+            <div class="testimonial-card-premium active">
+                <img src="https://i.pravatar.cc/120?img=1" alt="Client" class="testimonial-avatar-premium">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text-premium">
+                    Moe is an exceptional Android developer. His expertise in Kotlin and Jetpack Compose 
+                    helped us deliver a high-quality app ahead of schedule. Highly recommended!
+                </p>
+                <h4 class="testimonial-author-premium">John Smith</h4>
+                <p class="testimonial-role-premium">CTO, Tech Startup</p>
+                <div class="testimonial-rating-premium">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="testimonial-card-premium">
+                <img src="https://i.pravatar.cc/120?img=5" alt="Client" class="testimonial-avatar-premium">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text-premium">
+                    Working with Moe was a pleasure. His attention to detail and commitment to clean 
+                    architecture resulted in a maintainable, scalable application.
+                </p>
+                <h4 class="testimonial-author-premium">Sarah Johnson</h4>
+                <p class="testimonial-role-premium">Product Manager, E-commerce</p>
+                <div class="testimonial-rating-premium">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="testimonial-card-premium">
+                <img src="https://i.pravatar.cc/120?img=8" alt="Client" class="testimonial-avatar-premium">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text-premium">
+                    Moe's deep understanding of mobile security and performance optimization was invaluable. 
+                    He delivered beyond expectations.
+                </p>
+                <h4 class="testimonial-author-premium">David Chen</h4>
+                <p class="testimonial-role-premium">Founder, Fintech Company</p>
+                <div class="testimonial-rating-premium">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+
+        <div class="slider-controls-premium">
+            <button class="slider-btn-premium" onclick="previousTestimonial()" aria-label="Previous testimonial">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn-premium" onclick="nextTestimonial()" aria-label="Next testimonial">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <div class="section-sep-premium"></div>
+
+    <!-- Premium Contact Section -->
+    <section class="contact-section-premium section-premium" id="contact">
+        <div class="section-label-premium">Get In Touch</div>
+        <h2 class="section-title-premium">Let's Work Together</h2>
+        <p class="section-desc-premium">
+            Have a project in mind? Let's discuss how we can bring your vision to life.
+        </p>
+
+        <div class="contact-grid-premium">
+            <div class="contact-info-premium fade-in-premium">
+                <div class="contact-item-premium">
+                    <div class="contact-icon-premium">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details-premium">
+                        <h4>Phone</h4>
+                        <p>+95 9 889 000 889</p>
+                        <p>+95 9 666 000 050</p>
+                    </div>
+                </div>
+
+                <div class="contact-item-premium">
+                    <div class="contact-icon-premium">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details-premium">
+                        <h4>Email</h4>
+                        <p>moekyawaung@programmer.net</p>
+                        <p>moekyawaung@technologist.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item-premium">
+                    <div class="contact-icon-premium">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details-premium">
+                        <h4>Location</h4>
+                        <p>Tachileik, Myanmar 🇲🇲</p>
+                        <p>Bangkok, Thailand 🇹🇭</p>
+                    </div>
+                </div>
+
+                <div class="contact-item-premium">
+                    <div class="contact-icon-premium">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details-premium">
+                        <h4>Availability</h4>
+                        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        <p>GMT+6:30 (Myanmar Time)</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form-premium fade-in-premium" onsubmit="handleContactForm(event)">
+                <div class="form-group-premium">
+                    <label for="name" class="form-label-premium">Your Name</label>
+                    <input type="text" id="name" class="form-input-premium" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group-premium">
+                    <label for="email" class="form-label-premium">Your Email</label>
+                    <input type="email" id="email" class="form-input-premium" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group-premium">
+                    <label for="subject" class="form-label-premium">Subject</label>
+                    <input type="text" id="subject" class="form-input-premium" placeholder="Project Inquiry" required>
+                </div>
+
+                <div class="form-group-premium">
+                    <label for="message" class="form-label-premium">Message</label>
+                    <textarea id="message" class="form-textarea-premium" placeholder="Tell me about your project..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-premium">
+                    Send Message
+                    <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="footer-premium">
+        <div class="footer-grid-premium">
+            <div class="footer-column-premium fade-in-premium">
+                <h4>MOE KYAW AUNG</h4>
+                <p>
+                    Senior Android Developer with 12+ years of experience building secure, 
+                    scalable mobile applications using Kotlin, Jetpack Compose, and modern architecture.
+                </p>
+                <div class="footer-socials-premium">
+                    <a href="https://github.com/Dev-moe-kyawaung" class="footer-social-icon" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                                  <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" class="footer-social-icon" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://t.me/moekyawaung" class="footer-social-icon" target="_blank" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCuTXUguZb4xjeL2nX8WJG" class="footer-social-icon" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/moekyawaung" class="footer-social-icon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://gravatar.com/moekyawaung13721" class="footer-social-icon" target="_blank" aria-label="Gravatar">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column-premium fade-in-premium">
+                <h4>Quick Links</h4>
+                <ul class="footer-links-premium">
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                    <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                    <li><a href="#certificates"><i class="fas fa-chevron-right"></i> Certificates</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column-premium fade-in-premium">
+                <h4>Services</h4>
+                <ul class="footer-links-premium">
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> Mobile Development</a></li>
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> API Integration</a></li>
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> Firebase Setup</a></li>
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> CI/CD Pipeline</a></li>
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> Code Review</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column-premium fade-in-premium">
+                <h4>Resources</h4>
+                <ul class="footer-links-premium">
+                    <li><a href="https://dev-moe-kyawaung.github.io/Moekyawaung-Certificates/" target="_blank"><i class="fas fa-chevron-right"></i> Certificates</a></li>
+                    <li><a href="https://github.com/Dev-moe-kyawaung" target="_blank"><i class="fas fa-chevron-right"></i> GitHub Profile</a></li>
+                    <li><a href="#apps"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Get In Touch</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-premium">
+            <p>&copy; 2025 Moe Kyaw Aung. All rights reserved.</p>
+            <p>Made with <span class="footer-heart">♥</span> in Myanmar 🇲🇲</p>
+            <p>Powered by Kotlin, Jetpack Compose & Modern Android</p>
+        </div>
+    </footer>
+
+    <!-- Premium Back to Top Button -->
+    <button class="back-to-top-premium" onclick="scrollToTop()" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // ============================================================
+        // PRELOADER
+        // ============================================================
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.preloader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // ============================================================
+        // PREMIUM CURSOR
+        // ============================================================
+        const premiumCursor = document.querySelector('.premium-cursor');
+        const premiumCursorDot = document.querySelector('.premium-cursor-dot');
+
+        document.addEventListener('mousemove', (e) => {
+            premiumCursor.style.left = e.clientX + 'px';
+            premiumCursor.style.top = e.clientY + 'px';
+            premiumCursorDot.style.left = e.clientX + 'px';
+            premiumCursorDot.style.top = e.clientY + 'px';
+        });
+
+        // Add hover effect to interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .app-card-premium, .skill-chip-premium');
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                premiumCursor.classList.add('hover');
+            });
+            element.addEventListener('mouseleave', () => {
+                premiumCursor.classList.remove('hover');
+            });
+        });
+
+        // ============================================================
+        // NAVIGATION SCROLL EFFECT
+        // ============================================================
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.nav-premium');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ============================================================
+        // MOBILE MENU TOGGLE
+        // ============================================================
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu-premium');
+            const menuToggle = document.querySelector('.menu-toggle-premium');
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link-premium').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.querySelector('.nav-menu-premium');
+                const menuToggle = document.querySelector('.menu-toggle-premium');
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // ============================================================
+        // SMOOTH SCROLL
+        // ============================================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ============================================================
+        // ANIMATED COUNTER
+        // ============================================================
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (element.textContent.includes('%') ? '%' : '+');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : '+');
+                }
+            }, 16);
+        }
+
+        // ============================================================
+        // PROGRESS RINGS ANIMATION
+        // ============================================================
+        const ringObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    ringObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.progress-card-premium').forEach(card => {
+            ringObserver.observe(card);
+        });
+
+        // ============================================================
+        // SCROLL ANIMATIONS
+        // ============================================================
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Trigger counter animation for visible elements
+                    if (entry.target.querySelector('[data-target]')) {
+                        entry.target.querySelectorAll('[data-target]').forEach(counter => {
+                            animateCounter(counter);
+                        });
+                    }
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.fade-in-premium, .slide-left-premium, .slide-right-premium, .scale-in-premium').forEach(element => {
+            scrollObserver.observe(element);
+        });
+
+        // Counter observer
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('[data-target]').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // ============================================================
+        // THEME TOGGLE
+        // ============================================================
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const themeBtn = document.querySelector('.theme-toggle-premium i');
+            
+            if (document.body.classList.contains('light-mode')) {
+                themeBtn.classList.remove('fa-moon');
+                themeBtn.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                themeBtn.classList.remove('fa-sun');
+                themeBtn.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            document.querySelector('.theme-toggle-premium i').classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // ============================================================
+        // TESTIMONIALS SLIDER
+        // ============================================================
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card-premium');
+
+        function showTestimonial(index) {
+            testimonials.forEach((card, i) => {
+                card.classList.remove('active');
+                if (i === index) {
+                    card.classList.add('active');
+                }
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        function previousTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        // Auto-rotate testimonials
+        setInterval(nextTestimonial, 6000);
+
+        // ============================================================
+        // CONTACT FORM
+        // ============================================================
+        function handleContactForm(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Simulate form submission
+            alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you at ${email} soon.`);
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // ============================================================
+        // BACK TO TOP BUTTON
+        // ============================================================
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top-premium');
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // ============================================================
+        // TYPEWRITER EFFECT
+        // ============================================================
+        const roles = [
+            'Senior Android Developer',
+            'Kotlin Expert',
+            'Jetpack Compose Specialist',
+            'Mobile Architect',
+            'Open Source Contributor'
+        ];
+        
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
+
+        function typeRole() {
+            const typewriterElement = document.querySelector('.typewriter');
+            if (!typewriterElement) return;
+
+            const currentRole = roles[roleIndex];
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                setTimeout(() => {
+                    isDeleting = true;
+                    typeRole();
+                }, pauseTime);
+                return;
+            }
+
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeRole, 500);
+                return;
+            }
+
+            setTimeout(typeRole, isDeleting ? deletingSpeed : typingSpeed);
+        }
+
+        // Start typewriter effect after page load
+        setTimeout(typeRole, 2000);
+
+        // ============================================================
+        // PARALLAX EFFECT FOR SHAPES
+        // ============================================================
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.shape');
+            
+            shapes.forEach((shape, index) => {
+                const speed = 0.3 + (index * 0.1);
+                shape.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // ============================================================
+        // CONSOLE MESSAGE
+        // ============================================================
+        console.log('%c👋 Hello Developer!', 'color: #667eea; font-size: 24px; font-weight: bold;');
+        console.log('%c🚀 Premium Portfolio V2', 'color: #f5576c; font-size: 18px; font-weight: bold;');
+        console.log('%cLooking for a talented Android developer?', 'color: #00f2fe; font-size: 16px;');
+        console.log('%c📧 Contact: moekyawaung@programmer.net', 'color: #43e97b; font-size: 14px;');
+        console.log('%c🔗 GitHub: https://github.com/Dev-moe-kyawaung', 'color: #667eea; font-size: 14px;');
+
+        // ============================================================
+        // PERFORMANCE OPTIMIZATION
+        // ============================================================
+        // Debounce scroll events
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                window.cancelAnimationFrame(scrollTimeout);
+            }
+            scrollTimeout = window.requestAnimationFrame(function() {
+                // Scroll logic here
+            });
+        });
+
+        // ============================================================
+        // ACCESSIBILITY ENHANCEMENTS
+        // ============================================================
+        // Skip to main content
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab' && e.shiftKey === false) {
+                const firstInteractiveElement = document.querySelector('a, button, input, select, textarea');
+                if (document.activeElement === document.body) {
+                    e.preventDefault();
+                    firstInteractiveElement.focus();
+                }
+            }
+        });
+
+        // Announce page changes for screen readers
+        const sections = document.querySelectorAll('section[id]');
+        const announcer = document.createElement('div');
+        announcer.setAttribute('role', 'status');
+        announcer.setAttribute('aria-live', 'polite');
+        announcer.className = 'sr-only';
+        document.body.appendChild(announcer);
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionTitle = entry.target.querySelector('h2');
+                    if (sectionTitle) {
+                        announcer.textContent = `Now viewing: ${sectionTitle.textContent}`;
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+    </script>
+</body>
+</html>
+
